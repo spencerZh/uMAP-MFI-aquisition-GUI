@@ -1,8 +1,14 @@
 This repository contains three MATLAB functions to define ROI, measure MFI and format acquired data designed for fluorescent microarray readout from uMAP.
 
+array_slicer_manual: a function to slice a TIFF image generated from Innoscan slide scanner into individual images, each containing one microparray, by cropping.
+<img width="500" height="540" alt="Screenshot 2026-04-20 162347" src="https://github.com/user-attachments/assets/a9df921d-833b-415f-a20a-8197a558b436" />
+  input: execute the function, then select a fluorescent image of a full scanned slide. Then input the x and y coordinates representing the top left corner of the top left microarray to be cropped, and the number of microarrays based on row and column. The below three variables are defined emperically based on pixel and resolution seetings of the scanner and can be adjusted if needed.
+  <img width="942" height="130" alt="Screenshot 2026-04-20 162958" src="https://github.com/user-attachments/assets/c4c52816-4882-4acf-a7db-3573de0c0272" />
+output: y folders, each containing x cropped images where y represent the number of rows and x represent the number of columns.
+
 roi_grid_measure_tool: a GUI to define ROI to measure pixel intensities from a fluorescence image of a single microarray
 <img width="1456" height="870" alt="fig9 umap ROI matlab" src="https://github.com/user-attachments/assets/2cba9f4b-a6af-45e2-a32a-f025170b9d70" />
-  input: execute the function, then select a fluorescent image of a uMAP microarray by using the load image button
+  input: execute the function, then select a fluorescent image of a uMAP microarray (created by array_slicer_manual) by using the load image button
   
   operation: use the buttons on the GUI to adjust the layout of ROI, then use export to excel button to create output
   
